@@ -1,3 +1,6 @@
+#ifndef POKEMON_HPP
+#define POKEMON_HPP
+
 #include <string>
 
 using namespace std;
@@ -44,3 +47,5 @@ class Pokemon {
 
         ~Pokemon(){};
 };
+
+#endif

@@ -1,0 +1,3 @@
+/home/morelv/is/TPcpp_pokemon/src/build/CMakeFiles/pokemon.dir
+/home/morelv/is/TPcpp_pokemon/src/build/CMakeFiles/edit_cache.dir
+/home/morelv/is/TPcpp_pokemon/src/build/CMakeFiles/rebuild_cache.dir
