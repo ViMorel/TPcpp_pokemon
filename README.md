@@ -2,8 +2,7 @@
 
 Once in the repo, type :
 
-'''
+
 cd build
 cmake .. && make
 
-'''
