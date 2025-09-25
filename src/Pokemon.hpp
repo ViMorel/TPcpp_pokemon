@@ -46,6 +46,8 @@ class Pokemon {
         void display_info() const{};
 
         ~Pokemon(){};
+
+    void heal(int amount);
 };
 
 #endif

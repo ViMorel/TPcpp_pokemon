@@ -12,6 +12,8 @@ add_executable(pokemon
     Pokemon.cpp
     Pokemon_Vector.cpp
     Pokedex.cpp
+        Pokedex.hpp
+        Pokedex.hpp
 )
 
 target_include_directories(pokemon PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

@@ -23,3 +23,9 @@ void Pokemon::attackother(Pokemon &defender){
         defender.sethitpoint(atk - def);
     };
 };
+
+//ADD HEALING METHOD BY JUSTINE HAZAN
+void Pokemon::heal(int amount) {
+    hitpoint += amount;
+    std::cout << name << "gets" << amount << "PV" << std::endl;
+};
