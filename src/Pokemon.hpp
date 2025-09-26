@@ -9,10 +9,11 @@ class Pokemon {
     private:
         int id;
         string name;
+        int evolution;
+        double max_hitpoint;    
         double hitpoint;
         double attack;
         double defense;
-        int generation;
 
     public:
         static int counter;
@@ -23,16 +24,16 @@ class Pokemon {
                 const double max_hitpoint,
                 double hitpoint,
                 double attack,
-                double defense,
-                const int generation);
+                double defense);
         
-        Pokemon(const Pokemon &poke){
+        Pokemon(const Pokemon& poke){
             id = poke.id;
             name = poke.name;
+            evolution = poke.evolution;
+            max_hitpoint = poke.max_hitpoint;
             hitpoint = poke.hitpoint;
             attack = poke.attack;
             defense = poke.defense;
-            generation = poke.generation;
         };
 
         void attackother(Pokemon &defender);

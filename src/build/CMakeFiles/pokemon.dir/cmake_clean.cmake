@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pokemon.dir/Pokedex.cpp.o.d"
   "CMakeFiles/pokemon.dir/Pokemon.cpp.o"
   "CMakeFiles/pokemon.dir/Pokemon.cpp.o.d"
+  "CMakeFiles/pokemon.dir/Pokemon_Party.cpp.o"
+  "CMakeFiles/pokemon.dir/Pokemon_Party.cpp.o.d"
   "CMakeFiles/pokemon.dir/Pokemon_Vector.cpp.o"
   "CMakeFiles/pokemon.dir/Pokemon_Vector.cpp.o.d"
   "CMakeFiles/pokemon.dir/main.cpp.o"

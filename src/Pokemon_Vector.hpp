@@ -11,11 +11,11 @@ class Pokemon_Vector {
         Pokemon_Vector();
         virtual ~Pokemon_Vector();
 
-        virtual void add_Pokemon(const Pokemon& poke);
+        virtual void add_pokemon(const Pokemon& pokemon) = 0;
 
-        virtual void remove_Pokemon(int index);
+        virtual void remove_pokemon(int index) = 0;
 
-        Pokemon& get_Pokemon(int index);
+        virtual Pokemon get_pokemon(int index) = 0;
 
-        virtual void display();
+        virtual void display() = 0;
 };

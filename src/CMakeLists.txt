@@ -11,6 +11,7 @@ add_executable(pokemon
     main.cpp
     Pokemon.cpp
     Pokemon_Vector.cpp
+    Pokemon_Party.cpp
     Pokedex.cpp
 )
 

@@ -1,30 +1,71 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
+#include <vector>
+#include "Pokemon.hpp"
 #include "Pokedex.hpp"
 
+using std::vector;
 
-void lireCSV(const std::string& nomFichier) {
-    std::ifstream fichier(nomFichier); // Ouvre le fichier
-    if (!fichier.is_open()) { // Vérifie si le fichier est bien ouvert
-        std::cerr << "Impossible d'ouvrir le fichier : " << nomFichier << std::endl;
+Pokedex::Pokedex(const std::string& filename){
+    std::ifstream file(filename); // Ouvre le file
+    if (!file.is_open()) { // Vérifie si le file est bien ouvert
+        std::cerr << "Impossible d'ouvrir le file : " << filename << std::endl;
         return;
     }
 
-    std::string ligne;
-    while (std::getline(fichier, ligne)) { // Lit le fichier ligne par ligne
-        std::stringstream ss(ligne); // Utilise un flux pour diviser la ligne
-        std::string cellule;
-        std::vector<std::string> donneesLigne;
-        //Divise la ligne en cellules séparées par des virgules
-        while (std::getline(ss, cellule, ',')) {
-            donneesLigne.push_back(cellule); // Ajoute chaque cellule au vecteur
+    std::string line;
+    while (std::getline(file, line)) { // Lit le file line par line
+        std::stringstream ss(line); // Utilise un flux pour diviser la line
+        std::string cel;
+        std::vector<std::string> filedataline;
+        //Divise la line en cels séparées par des virgules
+        while (std::getline(ss, cel, ',')) {
+            filedataline.push_back(cel); // Ajoute chaque cel au vecteur
         }
-        // Affiche les données de la ligne
-        for (const auto& valeur : donneesLigne) {
-            std::cout << valeur << " "; // Affiche les valeurs séparées par un espace
+        Pokemon pokemon = Pokemon(
+            std::stoi(filedataline[0]),
+            filedataline[1],
+            std::stoi(filedataline[11]),
+            std::stod(filedataline[4]),
+            std::stod(filedataline[5]),
+            std::stod(filedataline[6]),
+            std::stod(filedataline[7])
+        );
+        pokemons.push_back(pokemon);
+        // Affiche les données de la line
+        for (const auto& value : filedataline) {
+            std::cout << value << " "; // Affiche les values séparées par un espace
         }
         std::cout << std::endl;
     }
-    fichier.close();
+    file.close();
+};
+
+Pokemon Pokedex::get_pokemon(int index){
+    if(index>pokedex_lengh || index ==0){
+        cout << "index invalide" << endl;
+    };
+    return pokemons[index];
+};
+
+void Pokedex::add_pokemon(const Pokemon& pokemon){
+    cout << "you cannot invent a pokemon xD" << endl;
+};
+
+void Pokedex::remove_pokemon(int index){
+    cout << "did you killed every single pokemon of this species ? Are you MA?D or something ?" << endl;
+};
+
+void Pokedex::display() {
+    for (auto& p : pokemons) {
+        p.display_info();
+    }
+};
+
+Pokedex* Pokedex::get_instance(const std::string& filename){
+    if(pokedex == nullptr){
+        pokedex = new Pokedex(filename);
+    };
 };

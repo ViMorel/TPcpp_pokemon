@@ -177,6 +177,30 @@ Pokemon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/Pokemon.cpp.s
 .PHONY : Pokemon.cpp.s
 
+Pokemon_Party.o: Pokemon_Party.cpp.o
+.PHONY : Pokemon_Party.o
+
+# target to build an object file
+Pokemon_Party.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/Pokemon_Party.cpp.o
+.PHONY : Pokemon_Party.cpp.o
+
+Pokemon_Party.i: Pokemon_Party.cpp.i
+.PHONY : Pokemon_Party.i
+
+# target to preprocess a source file
+Pokemon_Party.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/Pokemon_Party.cpp.i
+.PHONY : Pokemon_Party.cpp.i
+
+Pokemon_Party.s: Pokemon_Party.cpp.s
+.PHONY : Pokemon_Party.s
+
+# target to generate assembly for a file
+Pokemon_Party.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pokemon.dir/build.make CMakeFiles/pokemon.dir/Pokemon_Party.cpp.s
+.PHONY : Pokemon_Party.cpp.s
+
 Pokemon_Vector.o: Pokemon_Vector.cpp.o
 .PHONY : Pokemon_Vector.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... Pokemon.o"
 	@echo "... Pokemon.i"
 	@echo "... Pokemon.s"
+	@echo "... Pokemon_Party.o"
+	@echo "... Pokemon_Party.i"
+	@echo "... Pokemon_Party.s"
 	@echo "... Pokemon_Vector.o"
 	@echo "... Pokemon_Vector.i"
 	@echo "... Pokemon_Vector.s"
