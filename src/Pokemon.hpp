@@ -38,6 +38,7 @@ class Pokemon {
 
         void attackother(Pokemon &defender);
 
+        string getname(){return name;};
         double getattack(){return attack;};
         double getdefense(){return defense;};
         double gethitpoint(){return hitpoint;};
@@ -46,7 +47,7 @@ class Pokemon {
 
         void display_info() const{};
 
-        ~Pokemon(){};
+        ~Pokemon();
 };
 
 #endif

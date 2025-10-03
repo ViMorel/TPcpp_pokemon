@@ -1,3 +1,5 @@
+#ifndef POKEMON_VECTOR_HPP
+#define POKEMON_VECTOR_HPP
 #include <iostream>
 #include "Pokemon.hpp"
 #include <vector>
@@ -19,3 +21,5 @@ class Pokemon_Vector {
 
         virtual void display() = 0;
 };
+
+#endif

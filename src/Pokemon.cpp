@@ -22,4 +22,25 @@ void Pokemon::attackother(Pokemon &defender){
     if(atk > def){
         defender.sethitpoint(atk - def);
     };
+    hp = defender.gethitpoint();
+    string name = defender.getname();
+    std::cout << name << "hp are :" << hp << std::endl;
 };
+
+Pokemon::Pokemon(const int id,
+                const string name,
+                const int evolution,
+                const double max_hitpoint,
+                double hitpoint,
+                double attack,
+                double defense):
+                id(id), 
+                name(name), 
+                evolution(evolution),
+                max_hitpoint(max_hitpoint),
+                hitpoint(hitpoint),
+                attack(attack),
+                defense(defense)
+                {};
+
+Pokemon::~Pokemon(){};

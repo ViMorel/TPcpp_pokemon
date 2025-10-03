@@ -2,8 +2,6 @@
 
 Once in the repo, type :
 
-'''
-cd build
-cmake .. && make
 
-'''
+cd src/build && cmake .. && make
+

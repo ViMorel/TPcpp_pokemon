@@ -250,4 +250,10 @@ CMakeFiles/pokemon.dir/main.cpp.o: \
  /usr/include/SFML/Audio/SoundFileFactory.hpp \
  /usr/include/SFML/Audio/SoundFileFactory.inl \
  /usr/include/SFML/Audio/SoundFileReader.hpp \
- /usr/include/SFML/Audio/SoundFileWriter.hpp
+ /usr/include/SFML/Audio/SoundFileWriter.hpp \
+ /home/morelv/is/TPcpp_pokemon/src/Pokemon.hpp \
+ /home/morelv/is/TPcpp_pokemon/src/Pokedex.hpp \
+ /usr/include/c++/13/iostream /usr/include/c++/13/istream \
+ /usr/include/c++/13/bits/istream.tcc \
+ /home/morelv/is/TPcpp_pokemon/src/Pokemon_Vector.hpp \
+ /home/morelv/is/TPcpp_pokemon/src/Pokemon_Party.hpp

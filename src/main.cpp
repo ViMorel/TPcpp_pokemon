@@ -1,21 +1,17 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-//#include "Pokemon.hpp"
-//#include "Pokedex.hpp"
+#include "Pokemon.hpp"
+#include "Pokedex.hpp"
+#include "Pokemon_Party.hpp"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Hello SFML");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
-    while (window.isOpen()) {
-        sf::Event event{};
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();
-            }
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
+    Pokedex* pokedex = Pokedex::get_instance("../pokedex.csv");
+    std::cout << "1" << std::endl;
+    pokedex->display();
+    std::cout << "2" << std::endl;
+    Pokemon pikachu = pokedex->get_pokemon(25);
+    std::cout << "3" << std::endl;
+    pikachu.display_info();
+    std::cout << "4" << std::endl;
     return 0;
 }

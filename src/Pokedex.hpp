@@ -16,15 +16,13 @@ class Pokedex : public Pokemon_Vector {
 
         Pokedex(const string& filename);
         ~Pokedex();
+        std::string filename;
+
+    public :
+        static Pokedex *get_instance(const string& filename);
 
         Pokedex(Pokedex &other) = delete;
         Pokedex& operator = (const Pokedex&) = delete;
-
-    public :
-        static Pokedex *get_instance(const string& filename) {
-            static Pokedex instance(filename);
-            return filename;
-        };
 
         void add_pokemon(const Pokemon& pokemon) override;
 

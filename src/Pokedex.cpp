@@ -8,9 +8,14 @@
 
 using std::vector;
 
+Pokedex* Pokedex::pokedex{nullptr};
+
 Pokedex::Pokedex(const std::string& filename){
-    std::ifstream file(filename); // Ouvre le file
-    if (!file.is_open()) { // Vérifie si le file est bien ouvert
+    std::ifstream file(filename);
+
+    if (file.is_open()) {
+        std::cout << "Superbe fichier" << std::endl; 
+    } else {
         std::cerr << "Impossible d'ouvrir le file : " << filename << std::endl;
         return;
     }
@@ -43,6 +48,8 @@ Pokedex::Pokedex(const std::string& filename){
     file.close();
 };
 
+Pokedex::~Pokedex(){};
+
 Pokemon Pokedex::get_pokemon(int index){
     if(index>pokedex_lengh || index ==0){
         cout << "index invalide" << endl;
@@ -68,4 +75,5 @@ Pokedex* Pokedex::get_instance(const std::string& filename){
     if(pokedex == nullptr){
         pokedex = new Pokedex(filename);
     };
+    return pokedex;
 };
